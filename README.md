@@ -1,4 +1,4 @@
-# Solidity/React application #
+# Solidity/NextJS application #
 
 
 This application is based on the guided project in Stephen Grider's *Ethereum and Solidity, the Complete Developer's Guide* found on Udemy. 
