@@ -3,8 +3,8 @@ const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFactory.json');
 
 const provider = new HDWalletProvider(
-  process.env.MNEMONIC,
-  process.env.ENDPOINT
+  "sorry cotton forum sting prepare loud security chuckle course purity survey fence",
+  "https://goerli.infura.io/v3/63477657510a412ea8c536a88469fe52"
 );
 
 const web3 = new Web3(provider);
@@ -17,6 +17,8 @@ const deploy = async () => {
   const result = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))
     .deploy({ data: compiledFactory.bytecode })
     .send({ gas: '1000000', from: accounts[0] });
+
+  console.log('Contract deployed to', result.options.address);
 
   provider.engine.stop();
 };
